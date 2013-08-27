@@ -85,8 +85,7 @@ PRODUCT_COPY_FILES += \
     device/xiaomi/aries/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
     device/xiaomi/aries/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh \
     device/xiaomi/aries/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
-    device/xiaomi/aries/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
-    device/xiaomi/aries/init.xiaomi.aries.wifi.sh:system/etc/init.xiaomi.aries.wifi.sh
+    device/xiaomi/aries/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh
 
 PRODUCT_COPY_FILES += \
     device/xiaomi/aries/bootanimation.zip:system/media/bootanimation.zip
@@ -145,6 +144,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.handset.mic=digital \
     af.resampler.quality=255 \
     mpq.audio.decode=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.aries.power_profile=middle
 
 # Do not power down SIM card when modem is sent to Low Power Mode.
 PRODUCT_PROPERTY_OVERRIDES += \
