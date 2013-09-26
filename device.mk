@@ -291,6 +291,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
+# fmradio support
+PRODUCT_PACKAGES += \
+    qcom.fmradio \
+    libqcomfm_jni \
+    FM2 \
+    FMRecord
+
+# transmitter isn't supported
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.fm.transmitter=false
+
 PRODUCT_COPY_FILES += \
     device/xiaomi/aries/mount_ext4.sh:system/bin/mount_ext4.sh
 

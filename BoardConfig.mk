@@ -121,6 +121,10 @@ BOARD_HAVE_BLUETOOTH_QCOM                   := true
 BLUETOOTH_HCI_USE_MCT                       := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/aries/bluetooth
 
+# FmRadio
+COMMON_GLOBAL_CFLAGS += -DQCOM_FM_ENABLED
+QCOM_FM_ENABLED := true
+
 # Webkit
 ENABLE_WEBGL            := true
 TARGET_FORCE_CPU_UPLOAD := true
